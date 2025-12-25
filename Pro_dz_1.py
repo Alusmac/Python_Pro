@@ -18,6 +18,8 @@ resize(self, new_width, new_height) — a method that changes the width and heig
 Create an object of the Rectangle class and test all the methods.
 """
 import math
+
+
 def calculate_circle_area(radius):
     return math.pi * radius ** 2
 
@@ -34,7 +36,7 @@ class Rectangle:
         return self.width * self.height
 
     def perimeter(self):
-        return 2 * self.width + self.height
+        return 2 * (self.width + self.height)
 
     def is_square(self):
         return self.width == self.height
@@ -44,7 +46,8 @@ class Rectangle:
         self.height = new_height
 
 rectangle = Rectangle(5, 15)
-print("**************************************")
+
+print("*" * 30)
 print("Width of the rectangle:", rectangle.width)
 print("Height of the rectangle:", rectangle.height)
 print("Area of the rectangle:", rectangle.area())
@@ -53,6 +56,7 @@ print("Square is? :", rectangle.is_square())
 
 print("Changing size of Object:")
 rectangle.resize(20, 20)
+
 print("New width:", rectangle.width)
 print("New height:", rectangle.height)
 print("New Area:", rectangle.area())
