@@ -1,49 +1,70 @@
-"""2) Create a Rectangle class that represents a rectangle.
-Class requirements:
-Class attributes:
-width — the width of the rectangle.
-height — the height of the rectangle.
-Class methods:
-__init__(self, width, height) — a constructor that accepts the width and height of the rectangle.
-area(self) — a method that returns the area of the rectangle.
-perimeter(self) — a method that returns the perimeter of the rectangle.
-is_square(self) — a method that returns True if the rectangle is a square (the width is equal to the height), otherwise False.
-resize(self, new_width, new_height) — a method that changes the width and height of the rectangle.
-Create an object of the Rectangle class and test all the methods.
-"""
 class Rectangle:
-    def __init__(self, width, height):
+    """
+    A class representing a rectangle.
+
+    Attributes:
+        width (float): Width of the rectangle.
+        height (float): Height of the rectangle.
+    """
+
+    def __init__(self, width: float, height: float) -> None:
+        """
+        Initialize a Rectangle instance.
+
+        :param width: Width of the rectangle
+        :param height: Height of the rectangle
+        """
         self.width = width
         self.height = height
 
-    def area(self):
+    def area(self) -> float:
+        """
+        Calculate the area of the rectangle.
+
+        :return: Area of the rectangle
+        """
         return self.width * self.height
 
-    def perimeter(self):
+    def perimeter(self) -> float:
+        """
+        Calculate the perimeter of the rectangle.
+
+        :return: Perimeter of the rectangle
+        """
         return 2 * (self.width + self.height)
 
-    def is_square(self):
+    def is_square(self) -> bool:
+        """
+        Check whether the rectangle is a square.
+
+        :return: True if width equals height, otherwise False
+        """
         return self.width == self.height
 
-    def resize(self, new_width, new_height):
+    def resize(self, new_width: float, new_height: float) -> None:
+        """
+        Resize the rectangle.
+
+        :param new_width: New width of the rectangle
+        :param new_height: New height of the rectangle
+        """
         self.width = new_width
         self.height = new_height
 
-rectangle = Rectangle(5, 15)
+
+rectangle: Rectangle = Rectangle(5, 15)
 
 print("Width of the rectangle:", rectangle.width)
 print("Height of the rectangle:", rectangle.height)
 print("Area of the rectangle:", rectangle.area())
 print("Perimeter of the rectangle:", rectangle.perimeter())
-print("Square is? :", rectangle.is_square())
+print("Square is?:", rectangle.is_square())
 
-print("Changing size of Object:")
+print("Changing size of object:")
 rectangle.resize(20, 20)
 
 print("New width:", rectangle.width)
 print("New height:", rectangle.height)
-print("New Area:", rectangle.area())
-print("New Perimeter:", rectangle.perimeter())
+print("New area:", rectangle.area())
+print("New perimeter:", rectangle.perimeter())
 print("Square is?:", rectangle.is_square())
-
-
