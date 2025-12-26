@@ -11,7 +11,7 @@ def calculate_circle_area(radius: float) -> float:
     return math.pi * radius ** 2
 
 
-radius: float = float(input("Enter the radius of the circle: "))
-area: float = calculate_circle_area(radius)
+your_radius: float = float(input("Enter the radius of the circle: "))
+area: float = calculate_circle_area(your_radius)
 
 print(f"The area of the circle is: {area:.2f}")
