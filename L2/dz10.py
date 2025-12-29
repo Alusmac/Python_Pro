@@ -20,6 +20,7 @@ def change_price_produkt(produkt:dict) -> dict:
         print(f"Для цього Товару {product['Назва']} нова ціна {new_price}")
     return change_price
 
+
 change_price = change_price_produkt(product)
 change_price(34500)
 print(product)
