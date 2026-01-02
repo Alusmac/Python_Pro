@@ -2,7 +2,13 @@
 
 
 class Fraction:
-    def __init__(self, numerator, denominator):
+    """клас  (дробові числа).
+
+     який має методи для додавання, віднімання,
+     множення та ділення двох об'єктів цього класу
+     """
+
+    def __init__(self, numerator: int, denominator: int) -> None:
         self.numerator = numerator
         self.denominator = denominator
 
@@ -18,7 +24,7 @@ class Fraction:
     def __truediv__(self, other):
         return Fraction(self.numerator / other.numerator, self.denominator)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Fraction {self.numerator}/{self.denominator} "
 
 

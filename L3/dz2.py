@@ -3,7 +3,12 @@ import math
 
 
 class Vector:
-    def __init__(self, x=0, y=0):
+    """клас Vector, що підтримує операції додавання,
+
+     віднімання, множення на число та порівняння за довжиною
+     """
+
+    def __init__(self, x: float = 0, y: float = 0) -> None:
         self.x = x
         self.y = y
 
@@ -16,16 +21,16 @@ class Vector:
     def __mul__(self, other):
         return Vector(self.x * other.x, self.y * other.y)
 
-    def length(self):
+    def length(self) -> float:
         return math.sqrt(self.x * self.x + self.y * self.y)
 
-    def __lt__(self, other):
+    def __lt__(self, other) -> bool:
         return self.length() < other.length()
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         return self.x == other.x and self.y == other.y
 
-    def __str__(self):
+    def __str__(self) -> str:
         return f"({self.x}, {self.y})"
 
 

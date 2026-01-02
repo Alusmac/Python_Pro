@@ -2,19 +2,24 @@
 
 
 class MyBooksCollection:
-    def __init__(self, books):
+    """ клас моєї бібдіотеки,
+
+    який реальзіє методи рахування книжок, сторінок і шукати найменшу книгу за кількістю сторінок
+    """
+
+    def __init__(self, books) -> None:
         self.books = books
 
-    def __len__(self):
+    def __len__(self) -> int:
         return sum(1 for book in self.books)
 
     def __iter__(self):
         return iter(self.books)
 
-    def total_pages(self):
+    def total_pages(self) -> int:
         return sum(self.books)
 
-    def min_pages(self):
+    def min_pages(self) -> int:
         return min(self.books)
 
 
