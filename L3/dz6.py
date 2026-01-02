@@ -1,6 +1,3 @@
-import re
-
-
 class User:
     """клас з атрибутами first_name, last_name, email.
 
