@@ -15,8 +15,8 @@ class MutableClass:
 obj = MutableClass()
 
 obj.add_attribute("name", "Python")
-print(obj.name)
+print(obj.name)  # Python
 
 obj.remove_attribute("name")
 
-# print(obj.name)  # розкоментування викличе помилку
+# print(obj.name)   # Виникне помилка, атрибут видалений
