@@ -9,7 +9,7 @@ def collect_image_stats_simple(folder_path: str, output_csv: str) -> None:
      """
     with open(output_csv, mode='w', newline='') as csv_file:
         writer = csv.writer(csv_file)
-        # Заголовки
+
         writer.writerow(['filename', 'format', 'width', 'height', 'mode'])
 
         for filename in os.listdir(folder_path):
@@ -20,8 +20,8 @@ def collect_image_stats_simple(folder_path: str, output_csv: str) -> None:
             except Exception as e:
                 print(f"Не вдалося обробити {filename}: {e}")
 
+
 collect_image_stats_simple(
     folder_path=r"animals",
     output_csv="test3.csv"
 )
-
