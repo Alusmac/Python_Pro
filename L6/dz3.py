@@ -20,4 +20,8 @@ def collect_image_stats_simple(folder_path: str, output_csv: str) -> None:
             except Exception as e:
                 print(f"Не вдалося обробити {filename}: {e}")
 
-# collect_image_stats_simple("path_to_images", "output.csv")
+collect_image_stats_simple(
+    folder_path=r"animals",
+    output_csv="test3.csv"
+)
+
