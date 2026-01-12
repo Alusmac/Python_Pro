@@ -1,0 +1,5 @@
+abcdef
+123456789
+my work
+the weather is good today
+Im learning Python
