@@ -1,0 +1,32 @@
+[
+    {
+        "Name": "Book 1",
+        "Author": "Author 1",
+        "year": 2015,
+        "availability": true
+    },
+    {
+        "Name": "Book 2",
+        "Author": "Author 2",
+        "year": 2018,
+        "availability": false
+    },
+    {
+        "Name": "Python",
+        "Author": "Mark Lutz",
+        "year": 2025,
+        "availability": true
+    },
+    {
+        "Name": "Python",
+        "Author": "Mark Lutz",
+        "year": 2025,
+        "availability": true
+    },
+    {
+        "Name": "Python",
+        "Author": "Mark Lutz",
+        "year": 2025,
+        "availability": true
+    }
+]
