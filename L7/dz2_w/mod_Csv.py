@@ -1,25 +1,19 @@
+import requests
 import csv
 
 
-def save_csv(filename: str, data: list) -> None:
-    """Saving file in CSV
-    """
+def save_page_csv(url, filename):
     try:
+        response = requests.get(url)
+        response.raise_for_status()
+
+        # Зберігаємо весь HTML у одній колонці
         with open(filename, "w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
-            writer.writerows(data)
-        print(f"[OK] CSV saved: {filename}")
-    except Exception as e:
-        print(f"[Error] Filed to record CSV: {e}")
+            writer.writerow(["content"])  # заголовок колонки
+            writer.writerow([response.text])
 
+        print(f"Сторінку збережено у CSV: {filename}")
 
-def load_csv(filename: str) -> list:
-    """Reading file  CSV .
-    """
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            reader = csv.reader(file)
-            return list(reader)
-    except Exception as e:
-        print(f"[Error] Impossible to read CSV: {e}")
-        return []
+    except requests.exceptions.RequestException as e:
+        print(f"Помилка: {e}")

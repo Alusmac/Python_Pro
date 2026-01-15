@@ -1,32 +1,20 @@
-import xml.etree.ElementTree as etr
+import requests
+import xml.etree.ElementTree as ET
 
 
-def save_xml(filename: str, root_tag: str, data: dict) -> None:
-    """Saving file in xml
-    """
+def save_page_xml(url, filename):
     try:
-        root = etr.Element(root_tag)
-        for key, value in data.items():
-            elem = etr.SubElement(root, key)
-            elem.text = str(value)
+        response = requests.get(url)
+        response.raise_for_status()
 
-        tree = etr.ElementTree(root)
+        root = ET.Element("page")
+        ET.SubElement(root, "url").text = url
+        ET.SubElement(root, "content").text = response.text
+
+        tree = ET.ElementTree(root)
         tree.write(filename, encoding="utf-8", xml_declaration=True)
-        print(f"[OK] XML saved: {filename}")
 
-    except Exception as e:
-        print(f"[Error] Cann not save in XML: {e}")
+        print(f"Сторінку збережено у XML: {filename}")
 
-
-def load_xml(filename: str) -> dict:
-    """Reading XML file.
-    """
-    try:
-        tree = etr.parse(filename)
-        root = tree.getroot()
-
-        return {child.tag: child.text for child in root}
-
-    except Exception as e:
-        print(f"[Error] Cann not reading from XML: {e}")
-        return {}
+    except requests.exceptions.RequestException as e:
+        print(f"Помилка: {e}")

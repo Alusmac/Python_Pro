@@ -1,23 +1,21 @@
+import requests
 import json
 
 
-def save_json(filename: str, data: dict | list) -> None:
-    """saving file in JSON format.
-    """
+def save_page_json(url, filename):
     try:
+        response = requests.get(url)
+        response.raise_for_status()
+
+        data = {
+            "url": url,
+            "content": response.text
+        }
+
         with open(filename, "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
-        print(f"[OK] JSON saved: {filename}")
-    except Exception as e:
-        print(f"[Error] Cann not save in JSON: {e}")
 
+        print(f"Сторінку збережено у JSON: {filename}")
 
-def load_json(filename: str):
-    """Reading file  JSON format.
-    """
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except Exception as e:
-        print(f"[Error] Не вдалося прочитати JSON: {e}")
-        return None
+    except requests.exceptions.RequestException as e:
+        print(f"Помилка: {e}")
