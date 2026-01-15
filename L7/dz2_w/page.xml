@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='utf-8'?>
+<page><url>https://pythonleiden.nl/meeting-2026-01-22.html</url><content>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Python Leiden User Group | Meetup Thursday, January 22nd, 2026&lt;/title&gt;
+    &lt;link rel="me" href="https://fosstodon.org/@pythonleiden" /&gt;
+    &lt;link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css"
+      integrity="sha384-7P0NVe9LPDbUCAF+fH2R8Egwz1uqNH83Ns/bfJY0fN2XCDBMUI2S9gGzIOIRBKsA"
+      crossorigin="anonymous"
+    /&gt;
+    &lt;link rel="stylesheet" href="/css/main.css" /&gt;
+    &lt;link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon-96x96.png"
+      sizes="96x96"
+    /&gt;
+    &lt;link rel="icon" type="image/svg+xml" href="/images/favicon.svg" /&gt;
+    &lt;link rel="shortcut icon" href="/images/favicon.ico" /&gt;
+    &lt;link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    /&gt;
+    &lt;meta name="apple-mobile-web-app-title" content="PLUG" /&gt;
+    &lt;meta property="og:title" content="Python Leiden User Group | Meetup Thursday, January 22nd, 2026" /&gt;
+    &lt;meta
+      name="description"
+      content="A local usergroup for the Python programming language based in  Leiden, The Netherlands, meeting up every two months"
+    /&gt;
+    &lt;meta
+      property="og:description"
+      content="A local usergroup for the Python programming language based in  Leiden, The Netherlands, meeting up every two months"
+    /&gt;
+    &lt;meta property="og:type" content="website" /&gt;
+    &lt;meta property="og:image" content="images/python-logo-generic.svg" /&gt;
+    &lt;meta property="og:image:alt" content="Python Leiden User Group Logo" /&gt;
+    &lt;meta property="og:image:width" content="601" /&gt;
+    &lt;meta property="og:image:height" content="203" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;main class="container"&gt;
+      &lt;div&gt;
+        &lt;a href="/"
+          &gt;&lt;img
+            src="images/pythonleidensquare.svg"
+            alt="Python Leiden User Group Logo"
+            style="height: 5em"
+        /&gt;&lt;/a&gt;
+      &lt;/div&gt;
+      &lt;h1 id="meetup-thursday-january-22-2026"&gt;Meetup Thursday, January 22, 2026&lt;/h1&gt;
+
+&lt;p&gt;Our first year anniversary! The meeting will take place from 19:15 - 22:00. It
+will be held at Technolab in Leiden (&lt;a href="/how-to-reach-us.html"&gt;How to reach us&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;This includes free pizza provided by our food sponsor
+&lt;a href="https://samotics.com"&gt;Samotics&lt;/a&gt;. (Soft drinks available at the Space Leiden
+bar for a small fee, tea, coffee and water are free). If you do not care about
+pizza, feel free to join us at 20:00!&lt;/p&gt;
+
+&lt;h3 id="contents-of-the-meeting"&gt;Contents of the meeting&lt;/h3&gt;
+
+&lt;p&gt;At this meeting, we have three talks planned:&lt;/p&gt;
+
+&lt;h4 id="talk-1-simple-perfect-setup-handy-task-runner-for-data-projects-prefectio"&gt;Talk 1: Simple perfect setup: Handy task runner for data projects. Prefect.io&lt;/h4&gt;
+
+&lt;p&gt;by Reinout van Rees&lt;/p&gt;
+
+&lt;p&gt;This is a reprise of Reinouts talk at PyUtrecht in November 2025, which he
+gladly offers to do again for us in Leiden.&lt;/p&gt;
+
+&lt;h4 id="talk-2-python--postgresql-in-2026"&gt;Talk 2: Python + PostgreSQL in 2026&lt;/h4&gt;
+
+&lt;p&gt;by Aleksandr Dinu&lt;/p&gt;
+
+&lt;h4 id="talk-3-pr-vs-roc-curves---which-to-use"&gt;Talk 3: PR vs ROC Curves - which to use?&lt;/h4&gt;
+
+&lt;p&gt;by dr. ir. Sultan K. Imangaliyev&lt;/p&gt;
+
+&lt;p&gt;Many data practitioners use Precision-Recall (PR) and Receiver Operating
+Characteristics (ROC) curves interchangeably, but they tell very different
+stories â especially when your data is imbalanced. In this talk, Sultan will
+explain:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What PR and ROC curves actually mean (in simple terms)&lt;/li&gt;
+  &lt;li&gt;How they differ in their assumptions&lt;/li&gt;
+  &lt;li&gt;When to use one over the other (with real examples)&lt;/li&gt;
+  &lt;li&gt;Show a live demo using Python and scikit-learn&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="about-our-meetups"&gt;About our meetups&lt;/h3&gt;
+
+&lt;p&gt;Our talks happen in a friendly and informal setting. They are a great way to
+learn new things, share your knowledge, and meet other Python enthusiasts.
+There is always room for questions and discussion. Our presentations and talks
+are in English to be accessible for the large amount of non-Dutch speakers in
+the Python community.&lt;/p&gt;
+
+&lt;h3 id="price"&gt;Price&lt;/h3&gt;
+
+&lt;p&gt;The meetup is free of charge. Drinks are available for a small fee. We ask for
+a small donation to help cover small expenses, but this is not required.&lt;/p&gt;
+
+&lt;h3 id="how-to-register"&gt;How to register&lt;/h3&gt;
+
+&lt;p&gt;To register, sign up on our
+&lt;a href="https://www.meetup.com/python-leiden-user-group/events/312031455/"&gt;Meetup event page&lt;/a&gt;.
+Meetup accounts let you receive notifications for future events and allow us to
+track attendance.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.meetup.com/python-leiden-user-group/events/312031455/" target="_blank"&gt;
+  &lt;button&gt;Register at Meetup.com&lt;/button&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Weâre excited to meet you and have you be a part of the Python community in
+Leiden. See you there!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="/"&gt;Back to the homepage&lt;/a&gt;&lt;/p&gt;
+
+    &lt;/main&gt;
+    &lt;a
+      href="https://codeberg.org/pythonleiden/pythonleiden"
+      aria-label="View source on Codeberg"
+    &gt;
+      &lt;img
+        src="images/codeberg-logo_horizontal_blue.svg"
+        style="height: 2em; position: absolute; top: 0; border: 0; right: 0"
+      /&gt;
+    &lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</content></page>
