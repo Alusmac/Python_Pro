@@ -2,7 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 
-def save_page_xml(url, filename):
+def save_page_xml(url, filename:str) -> None:
     try:
         response = requests.get(url)
         response.raise_for_status()
