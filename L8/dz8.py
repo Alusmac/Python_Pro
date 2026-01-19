@@ -50,4 +50,4 @@ def matrix_multiply(matrix1, matrix2):
 
 
 if __name__ == "__main__":
-    doctest.testmod(verbose=True)
+    doctest.testmod()
