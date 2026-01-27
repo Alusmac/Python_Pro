@@ -28,5 +28,11 @@
         "Author": "Mark Lutz",
         "year": 2025,
         "availability": true
+    },
+    {
+        "Name": "Python",
+        "Author": "Mark Lutz",
+        "year": 2025,
+        "availability": true
     }
 ]
