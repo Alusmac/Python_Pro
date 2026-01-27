@@ -58,7 +58,7 @@ class ReportingService:
         return result
 
     def avg_actor_birth_by_genre(self, genre):
-        """Average year of birth of actors who starred in films of a certain genre
+        """Average birth year of actors in movies of a given genre
         """
         conn = get_connection()
         cursor = conn.cursor()
@@ -67,7 +67,7 @@ class ReportingService:
             FROM actors a
             INNER JOIN movie_cast mc ON a.id = mc.actor_id
             INNER JOIN movies m ON mc.movie_id = m.id
-            WHERE m.genre = ?;
+            WHERE m.genre = ? COLLATE NOCASE;
         """, (genre,))
         avg_year = cursor.fetchone()[0]
         conn.close()

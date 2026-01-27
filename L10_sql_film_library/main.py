@@ -2,6 +2,14 @@ from film_library.db import init_db
 from film_library.services.movie_service import MovieService
 from film_library.services.actor_service import ActorService
 from film_library.services.reporting_service import ReportingService
+from film_library.tools.inspectors import (
+    validate_movie_title,
+    validate_movie_year,
+    validate_genre,
+    normalize_title_case,
+    validate_actor_name,
+    validate_actor_birth_year
+)
 
 init_db()
 
@@ -32,22 +40,45 @@ def main():
         choice = input("Select an option: ").strip()
 
         if choice == "1":
-            title = input("Movie title: ")
-            release_year = int(input("Release year: "))
-            genre = input("Genre: ")
-            actors_input = input("Actor names separated by comma (leave empty if none): ")
-            actor_names = [a.strip() for a in actors_input.split(",")] if actors_input else None
-            movie_id = movie_service.add_movie(title, release_year, genre, actor_names)
-            print(f"Movie added with ID: {movie_id}")
+
+            try:
+                title = input("Movie title: ")
+                validate_movie_title(title)
+                title = normalize_title_case(title)
+
+                release_year = int(input("Release year: "))
+                validate_movie_year(release_year)
+
+                genre = input("Genre: ")
+                validate_genre(genre)
+
+                actors_input = input("Actor names separated by comma (leave empty if none): ")
+                actor_names = [a.strip() for a in actors_input.split(",")] if actors_input else None
+
+                movie_id = movie_service.add_movie(title, release_year, genre, actor_names)
+                print(f"Movie added with ID: {movie_id}")
+
+            except ValueError as e:
+                print(f"Input error: {e}")
 
         elif choice == "2":
-            name = input("Actor name: ")
-            birth_year = int(input("Birth year: "))
-            actor_id = actor_service.add_actor(name, birth_year)
-            print(f"Actor added with ID: {actor_id}")
 
+            try:
+                name = input("Actor name: ")
+                validate_actor_name(name)
+
+                birth_year_input = input("Birth year (optional): ")
+                birth_year = int(birth_year_input) if birth_year_input else None
+                validate_actor_birth_year(birth_year)
+
+                actor_id = actor_service.add_actor(name, birth_year)
+                print(f"Actor added with ID: {actor_id}")
+
+            except ValueError as e:
+                print(f"Input error: {e}")
 
         elif choice == "3":
+
             print("\nMovies with actors:")
             movies_with_actors = reporting_service.movies_with_actors()
             if not movies_with_actors:
@@ -57,14 +88,18 @@ def main():
                     actors_display = actors if actors else "No actors"
                     print(f"{idx}. Movie: \"{title}\", Actors: {actors_display}")
 
-
         elif choice == "4":
-            print("\nUnique genres:")
-            for g in reporting_service.unique_genres():
-                print(f"- {g}")
 
+            print("\nUnique genres:")
+            genres = reporting_service.unique_genres()
+            if not genres:
+                print("No genres found.")
+            else:
+                for g in genres:
+                    print(f"- {g}")
 
         elif choice == "5":
+
             print("\nGenres and number of movies:")
             movies_by_genre = reporting_service.count_movies_by_genre()
             if not movies_by_genre:
@@ -73,16 +108,17 @@ def main():
                 for idx, (genre, count) in enumerate(movies_by_genre, start=1):
                     print(f"{idx}. {genre}: {count}")
 
-
         elif choice == "6":
-            genre = input("Enter genre: ")
+
+            genre = input("Enter genre: ").strip()
             avg_year = reporting_service.avg_actor_birth_by_genre(genre)
             if avg_year:
-                print(f"Average birth year of actors: {avg_year:.2f}")
+                print(f"Average birth year of actors in '{genre}': {avg_year:.2f}")
             else:
-                print("No data for this genre.")
+                print(f"No data found for genre '{genre}'.")
 
         elif choice == "7":
+
             keyword = input("Enter keyword to search: ")
             movies = reporting_service.search_movies_like(keyword)
             if movies:
@@ -93,6 +129,7 @@ def main():
                 print("No movies found.")
 
         elif choice == "8":
+
             limit = int(input("How many movies per page? "))
             total = movie_service.get_total_count()
             for offset in range(0, total, limit):
@@ -105,17 +142,19 @@ def main():
                     break
 
         elif choice == "9":
+
             print("\nAll actors and movie titles:")
             for name in reporting_service.all_actors_and_movies_union():
                 print(f"- {name}")
 
         elif choice == "10":
+
             print("\nMovies with age:")
             for title, age in reporting_service.movies_with_age():
                 print(f"- {title}: {age} years old")
 
         elif choice == "0":
-            print("Exiting...")
+            print("Exiting...Have a nice day!")
             break
 
         else:
