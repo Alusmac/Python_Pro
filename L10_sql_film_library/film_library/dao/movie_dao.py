@@ -21,6 +21,7 @@ class MovieDAO:
         return movie_id
 
     def get_all(self):
+        """Getting all movies"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -31,6 +32,7 @@ class MovieDAO:
         return movies
 
     def get_by_id(self, movie_id):
+        """Getting movies by id"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -44,6 +46,7 @@ class MovieDAO:
         return movie
 
     def search_by_title(self, keyword):
+        """Searching by title"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -57,6 +60,7 @@ class MovieDAO:
         return movies
 
     def get_paginated(self, limit, offset):
+        """Getting paginated movies"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -70,6 +74,7 @@ class MovieDAO:
         return movies
 
     def count(self):
+        """Counting movies"""
         conn = get_connection()
         cursor = conn.cursor()
 

@@ -6,6 +6,7 @@ class MovieCastDAO:
     """
 
     def add_actor_to_movie(self, movie_id, actor_id):
+        """Adding actor to movie"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -18,6 +19,7 @@ class MovieCastDAO:
         conn.close()
 
     def get_actors_for_movie(self, movie_id):
+        """Getting actors from movie"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -33,6 +35,7 @@ class MovieCastDAO:
         return actors
 
     def get_movies_for_actor(self, actor_id):
+        """Getting movies from actor"""
         conn = get_connection()
         cursor = conn.cursor()
 

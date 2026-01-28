@@ -6,6 +6,7 @@ class ActorDAO:
     """
 
     def add(self, name, birth_year):
+        """Adding a new actor"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -21,6 +22,7 @@ class ActorDAO:
         return actor_id
 
     def get_all(self):
+        """Getting all actors"""
         conn = get_connection()
         cursor = conn.cursor()
 
@@ -31,6 +33,7 @@ class ActorDAO:
         return actors
 
     def get_by_id(self, actor_id):
+        """Getting actor by id"""
         conn = get_connection()
         cursor = conn.cursor()
 
