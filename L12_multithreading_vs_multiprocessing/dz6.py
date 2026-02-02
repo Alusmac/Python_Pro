@@ -4,7 +4,7 @@ import random
 lock = threading.Lock()
 
 
-def evolve_organism(organism):
+def evolve_organism(organism: dict) -> None:
     """Simulates one day in the life of an organism
     """
 

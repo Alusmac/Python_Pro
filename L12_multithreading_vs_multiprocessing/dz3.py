@@ -2,7 +2,7 @@ from multiprocessing import Process, Queue
 import random
 
 
-def partial_sum(numbers, queue):
+def partial_sum(numbers: list, queue: Queue) -> None:
     """counting the sum of numbers in a large array
     """
     result = sum(numbers)

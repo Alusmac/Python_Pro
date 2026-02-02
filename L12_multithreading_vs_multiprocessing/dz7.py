@@ -2,7 +2,7 @@ from multiprocessing import Pool
 import math
 
 
-def partial_factorial(range_tuple):
+def partial_factorial(range_tuple: tuple) -> int:
     """Calculates the product of numbers from start to end included
     """
     start, end = range_tuple

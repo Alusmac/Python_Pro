@@ -5,7 +5,7 @@ HOST = "127.0.0.1"
 PORT = 8080
 
 
-def handle_client(client_socket, client_address):
+def handle_client(client_socket, client_address: tuple) -> None:
     """Handle a single client's HTTP request
      """
     print(f"Client connected: {client_address}")
@@ -28,7 +28,7 @@ def handle_client(client_socket, client_address):
     print(f"Client disconnected: {client_address}")
 
 
-def start_server():
+def start_server() -> None:
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((HOST, PORT))
     server_socket.listen()

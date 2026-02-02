@@ -1,7 +1,7 @@
 import threading
 
 
-def search_in_file(filename, keyword):
+def search_in_file(filename: str, keyword: str) -> None:
     """Searches for keyword in file and prints where found
     """
     try:

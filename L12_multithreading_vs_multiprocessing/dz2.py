@@ -3,7 +3,7 @@ from concurrent.futures import ProcessPoolExecutor
 import os
 
 
-def resize_image(image_path):
+def resize_image(image_path: str) -> None:
     """ function that resize image to desired size
     """
     img = Image.open(image_path)
