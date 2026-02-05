@@ -1,4 +1,4 @@
-from L7.dz2_w import *
+from L7_Modules_and_packages.dz2_w import *
 
 download_page("https://pythonleiden.nl/meeting-2026-01-22.html", "page.txt")
 

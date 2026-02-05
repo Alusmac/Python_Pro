@@ -1,4 +1,4 @@
-from L7.my_package import *
+from L7_Modules_and_packages.my_package import *
 
 print(factorial_math(5))
 print(gcd_math(5, 10))
